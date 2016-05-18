@@ -1,0 +1,19 @@
+{
+    "name": "riseno/laravel-minify-response",
+    "description": "Minify html response",
+    "keywords": ["laravel", "minify", "response", "riseno", "output", "middleware"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Chan",
+            "email": "rc@riseno.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Riseno\\MinifyResponse\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
