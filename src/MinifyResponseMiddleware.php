@@ -45,9 +45,11 @@ class MinifyResponseMiddleware
         /** @var \Illuminate\Http\Response $response */
         $response = $next($request);
 
-        $response->setContent(
-            $this->filterContent($response->getContent())
-        );
+        if (env('APP_ENV', 'local') == 'production') {
+            $response->setContent(
+                $this->filterContent($response->getContent())
+            );
+        }
 
         return $response;
     }
