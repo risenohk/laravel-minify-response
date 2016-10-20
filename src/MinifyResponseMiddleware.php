@@ -5,7 +5,6 @@
  * Date: 18/5/2016
  * Time: 11:09 PM.
  */
-
 namespace Riseno\MinifyResponse;
 
 use Closure;
@@ -21,7 +20,7 @@ class MinifyResponseMiddleware
     protected $search = [
         '/\>[^\S ]+/s',
         '/[^\S ]+\</s',
-        '/(\s)+/s'
+        '/(\s)+/s',
     ];
 
     /**
@@ -30,14 +29,15 @@ class MinifyResponseMiddleware
     protected $replace = [
         '>',
         '<',
-        '\\1'
+        '\\1',
     ];
 
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure                 $next
+     *
      * @return mixed
      */
     public function handle($request, Closure $next)
